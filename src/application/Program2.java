@@ -22,7 +22,13 @@ public class Program2 {
 		System.out.println("\n==== TEST 2: department update ====");
 		department = new Department(6, "Movies");
 		departmentDao.update(department);
-		System.out.println("Update complete!");
+		System.out.println("Update completed!");
+		
+		System.out.println("\n==== TEST 3: department delete ====");
+		System.out.print("Enter id for delete test: ");
+		int id = sc.nextInt();
+		departmentDao.deleteById(id);
+		System.out.println("Delete completed!");
 		
 		sc.close();
 	}
