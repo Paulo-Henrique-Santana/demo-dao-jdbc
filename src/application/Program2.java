@@ -1,5 +1,6 @@
 package application;
 
+import java.util.List;
 import java.util.Scanner;
 
 import model.dao.DaoFactory;
@@ -34,6 +35,11 @@ public class Program2 {
 		department = departmentDao.findById(3);
 		System.out.println(department);
 		
+		System.out.println("\n==== TEST 5: department findAll ====");
+		List<Department> departments = departmentDao.findAll();
+		for (Department department2 : departments) {
+			System.out.println(department2);
+		}
 		sc.close();
 	}
 
